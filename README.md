@@ -1,4 +1,3 @@
-Here’s a draft of a `README.md` to get you started:
 
 ```markdown
 # Valutastrøm
