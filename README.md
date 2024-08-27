@@ -33,7 +33,7 @@ Our vision for Valutastrøm is to become the go-to open-source platform for fina
 
 Valutastrøm is a community-driven project, and we welcome contributions from developers, financial experts, and users. Whether you're interested in coding, strategy development, or simply using the tools we create, there's a place for you here.
 
-Join us in building a future where everyone has the tools they need to achieve financial success.
+We need your help from all level skills and abilities. Figuring out how your values align with this project, read the documents, and ask questions! Join us in building a future where everyone has the tools they need to achieve financial success.
 
 ## License
 
