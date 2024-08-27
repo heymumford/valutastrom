@@ -4,7 +4,7 @@
 
 ## Overview
 
-Valutastrøm, inspired by the Nordic phrase "build currency," is an open-source project dedicated to enabling anyone, regardless of their financial background or expertise, to create and grow financial assets in open markets. Our mission is to democratize access to powerful financial tools and strategies, fostering economic empowerment and financial independence.
+Valutastrøm, loosely Nordic for "build currency," is an open-source project dedicated to enabling anyone, regardless of their financial background or expertise, to create and grow financial assets in open markets. We believe all humans should have equal access to investing and building financial security. Our mission is to democratize access to powerful financial tools and strategies, fostering economic empowerment and financial independence. We do not have any problem with capitalism, commercialism, politics, or big money. We simply want to kill poverty and elevate all of humanity above financial fear.
 
 ## Founding Philosophy
 
