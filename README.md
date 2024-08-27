@@ -1,5 +1,3 @@
-
-```markdown
 # Valutastrøm
 
 **Empowering individuals to build currency value on open markets.**
@@ -41,8 +39,7 @@ Join us in building a future where everyone has the tools they need to achieve f
 
 This project is licensed under the [MIT License](LICENSE).
 
----
+## Thank You
 
 Thank you for being a part of Valutastrøm. Together, we're building a brighter financial future for all humanity.
-```
 
