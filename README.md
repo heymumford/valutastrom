@@ -1,6 +1,6 @@
 # Valutastrøm
 
-**Empowering individuals to build currency value on open markets.**
+**Empower all humans easily accessible mechanicms to build value in any currency on open markets on planet Earth.**
 
 ## Overview
 
