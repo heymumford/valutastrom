@@ -1,16 +1,21 @@
 # Use BuildKit's parallel execution by creating a final image that depends on intermediate stages.
 
+# Base Image for Ubuntu-based stages
+FROM alpine:latest AS base_alpine
+RUN apk update && apk upgrade && \
+    apk add --no-cache binutils curl gnupg
+
 # Stage 1: Java
 FROM openjdk:11-slim AS java_builder
 WORKDIR /app
 COPY ./src/java/src/main/java /app
-RUN javac HelloWorld.java && rm -rf /var/lib/apt/lists/* && echo "Java build done"
+RUN javac HelloWorld.java && echo "Java build done"
 
 # Stage 2: Python
 FROM python:3.9-alpine AS python_builder
 WORKDIR /app
 COPY ./src/python /app
-RUN python -m py_compile helloWorld.py && rm -rf /var/cache/apk/* && echo "Python build done"
+RUN python -m py_compile helloWorld.py && echo "Python build done"
 
 # Stage 3: JavaScript
 FROM node:16-alpine AS js_builder
@@ -36,18 +41,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends binutils && \
 FROM r-base:4.1.2 AS r_builder
 WORKDIR /app
 COPY ./src/r /app
-RUN Rscript -e "print('Hello, World from R!')" && rm -rf /tmp/* && echo "R build done"
+RUN Rscript -e "print('Hello, World from R!')" && echo "R build done"
 
 # Stage 7: Scala
-FROM openjdk:11-jre-slim AS scala_builder
+FROM openjdk:11-slim AS scala_builder
 RUN apt-get update && apt-get install -y --no-install-recommends curl gnupg2 && \
     echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | tee /etc/apt/sources.list.d/sbt.list && \
     curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x99E82A75642AC823" | apt-key add && \
-    apt-get update && apt-get install -y --no-install-recommends sbt && \
-    rm -rf /var/lib/apt/lists/*
+    apt-get update && apt-get install -y --no-install-recommends sbt binutils && \
+    rm -rf /var/lib/apt/lists/* && echo "Scala dependencies installed"
 WORKDIR /app
 COPY ./src/scala /app
 RUN sbt compile && echo "Scala build done"
+
 
 # Stage 8: C++
 FROM gcc:latest AS cpp_builder
