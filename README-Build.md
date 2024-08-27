@@ -27,11 +27,6 @@ Before you begin, ensure that the following tools are installed:
 
 The project is organized with a separate Dockerfile for each programming language. These Dockerfiles define the environment for building and running "Hello World" examples in different languages.
 
-- **/src/**: Contains the source code for each language.
-- **/src/java/**: Java source files.
-- **/src/python/**: Python source files.
-- (…repeat for other languages…)
-
 ## Building the Project
 
 To build all Docker containers for each language:
