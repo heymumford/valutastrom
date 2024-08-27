@@ -72,5 +72,6 @@ COPY --from=r_builder /app /final/r
 COPY --from=scala_builder /app /final/scala
 COPY --from=cpp_builder /app /final/cpp
 
+
 # Command just to verify that the final image contains everything
 CMD ["echo", "All stages built successfully"]
