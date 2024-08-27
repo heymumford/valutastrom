@@ -1,14 +1,13 @@
 
 # Build and Configuration Guide
 
-This document provides detailed instructions on configuring and orchestrating the build process for the Polyglot Trading Platform project. It is intended for developers who need to understand the build process, set up their environment, and manage Docker containers.
+This document provides detailed instructions on configuring and orchestrating the build process for the Valutastrom Polyglot Trading Platform. It is intended for developers who need to understand the build process, set up their environment, and manage Docker containers efficiently.
 
 ## Prerequisites
 
 Before you begin, ensure that the following tools are installed:
 
 - **Docker:** Used for creating isolated environments for each programming language.
-- **Make:** A build automation tool that orchestrates the build process across different languages.
 
 ### Windows Users
 - Install [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install).
@@ -21,7 +20,6 @@ Before you begin, ensure that the following tools are installed:
 
 ### Linux Users
 - Install Docker using your distribution’s package manager.
-- Ensure `make` is installed.
 
 ## Project Structure
 
@@ -29,43 +27,55 @@ The project is organized with a separate Dockerfile for each programming languag
 
 ## Building the Project
 
-To build all Docker containers for each language:
+To build all Docker containers for each language in parallel, run:
 
 ```bash
-make all
+DOCKER_BUILDKIT=1 docker build .
 ```
 
-This command will:
-- Build Docker containers for each language using the corresponding Dockerfile.
-- Compile and run the "Hello World" examples in each language.
-
-## Running Containers Individually
-
-You can also build and run containers individually. For example, to build and run the Java container:
-
-```bash
-make java
-docker run --rm javaHelloWorld
-```
-
-This process can be repeated for each language, using the appropriate make target.
+This command leverages Docker's BuildKit to build all stages in parallel, significantly speeding up the build process. Cached layers are used to minimize rebuild time, with all images typically building in less than 1 second when no changes are detected.
 
 ## Verifying the Build
 
-To verify that all containers were created successfully, run:
+To verify that all containers were created successfully, list your Docker images:
 
 ```bash
-make verify
+docker images
 ```
 
-This will check that each Docker container was built and is available locally.
+This will show you all the images that were built, along with their tags.
+
+## Running Containers Individually
+
+To run a specific container, use the following command, replacing `<image_name>` with the desired container:
+
+```bash
+docker run --rm <image_name>
+```
+
+For example, to run the Java container:
+
+```bash
+docker run --rm v9m-java-core
+```
+
+This process can be repeated for each language by substituting `<image_name>` with the appropriate image name.
+
+## Clean Up
+
+To remove all Docker containers and images created during the build process, use the following commands:
+
+```bash
+docker system prune -a
+```
+
+This will ensure your environment is clean and ready for a fresh build.
 
 ## Troubleshooting
 
 If you encounter issues during the build process, consider the following:
 
 - **Docker not found:** Ensure Docker is installed and running.
-- **Make command not found:** For Windows users, ensure you're using WSL or Git Bash with `make` installed.
 - **Container build errors:** Check Docker logs or consult the Dockerfile for the specific language.
 
 For more detailed setup instructions, refer to the [Primary README](./README.md).
@@ -73,6 +83,3 @@ For more detailed setup instructions, refer to the [Primary README](./README.md)
 ## Next Steps
 
 Once the build process is working, you can begin experimenting with the tubes and connecting different language modules. This will allow you to explore how each part of the platform interacts and contributes to the overall system.
-
-Feel free to reach out if you have any questions or encounter issues!
-
