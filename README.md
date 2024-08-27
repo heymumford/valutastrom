@@ -29,6 +29,13 @@ Valutastrøm is built on the belief that financial markets should be accessible 
 
 Our vision for Valutastrøm is to become the go-to open-source platform for financial empowerment, providing a robust, adaptable framework that enables anyone to participate in and benefit from the financial markets. We see a future where financial literacy and economic independence are within reach for all, powered by a global community of contributors working together to build tools that make financial success achievable for everyone.
 
+# Project Overview
+
+Welcome to the project! This repository is structured to support a polyglot approach to software development, using multiple programming languages to build modular and adaptable software.
+
+Please see [README-RepoStructure.md](README-RepoStructure.md) for a detailed breakdown of the repository structure.
+Please see [README-Build.md](README-Build.md) for build instructions.
+
 ## Get Involved
 
 Valutastrøm is a community-driven project, and we welcome contributions from developers, financial experts, and users. Whether you're interested in coding, strategy development, or simply using the tools we create, there's a place for you here.
@@ -42,4 +49,3 @@ This project is licensed under the [MIT License](LICENSE).
 ## Thank You
 
 Thank you for being a part of Valutastrøm. Together, we're building a brighter financial future for all humanity.
-
