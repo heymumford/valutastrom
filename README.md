@@ -6,9 +6,19 @@
 
 Valutastrøm, loosely Nordic for "build currency," is an open-source project dedicated to enabling anyone, regardless of their financial background or expertise, to create and grow financial assets in open markets. We believe all humans should have equal access to investing and building financial security. Our mission is to democratize access to powerful financial tools and strategies, fostering economic empowerment and financial independence. We do not have any problem with capitalism, commercialism, politics, or big money. We simply want to kill poverty and elevate all of humanity above financial fear.
 
-## Founding Philosophy
+## Philosophy
 
 Valutastrøm is built on the belief that financial markets should be accessible to all, not just those with insider knowledge or significant capital. We aim to lower the barriers to entry by providing a modular, intuitive framework that individuals can use to understand, engage with, and thrive in financial markets. We believe in transparency, community-driven development, and the power of open-source collaboration to create tools that benefit everyone.
+
+## Our View of the Horizon 
+
+We believe in a future where financial markets are accessible to all, driven by the power of data, intelligent transformations, and cutting-edge algorithms. Our vision is to harness the most effective and readily available economic data, transforming it into actionable insights that empower our users to make informed trading decisions with unparalleled speed and accuracy—at no cost.
+
+Through our Tube-Based Design philosophy, we create a dynamic, modular system that intuitively processes data, adapts to market changes, and delivers efficient, timely signals. These signals are crafted to drive faster trading decisions, giving our users the edge they need to navigate complex financial landscapes.
+
+Valutastrom is committed to democratizing financial markets, ensuring that every human, regardless of resources, can access the tools and insights needed to succeed. We envision a world where the power of financial intelligence is decentralized, where data-driven decisions are made in real-time, and where every trader, from novice to expert, can thrive in the global marketplace.
+
+Together, we are building the future of trading—accessible, intuitive, and empowering for all.
 
 ## Fundamental Principles
 
@@ -40,7 +50,7 @@ Please see [README-Build.md](README-Build.md) for build instructions.
 
 Valutastrøm is a community-driven project, and we welcome contributions from developers, financial experts, and users. Whether you're interested in coding, strategy development, or simply using the tools we create, there's a place for you here.
 
-We need your help from all level skills and abilities. Figuring out how your values align with this project, read the documents, and ask questions! Join us in building a future where everyone has the tools they need to achieve financial success.
+We need your help from all level skills and abilities. Figure out how your values align with this project, read the documents, and ask questions! Join us in building a future where everyone has the tools they need to achieve financial success.
 
 ## License
 
